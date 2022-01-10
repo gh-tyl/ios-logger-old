@@ -99,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */,
-				3C235C6927868CAE004D4F87 /* ContentView.swift */,
+				3CF7564E278ADFFB00982136 /* Views */,
+				3CF7564F278AE00400982136 /* Model */,
+				3CF75650278AE01C00982136 /* Resources */,
 				3C235C6B27868CB0004D4F87 /* Assets.xcassets */,
 				3C235C7027868CB0004D4F87 /* Persistence.swift */,
 				3C235C7227868CB0004D4F87 /* SensorLogs.xcdatamodeld */,
@@ -131,6 +133,52 @@
 				3C235C8927868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift */,
 			);
 			path = SensorLogsUITests;
+			sourceTree = "<group>";
+		};
+		3CF7564E278ADFFB00982136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C235C6927868CAE004D4F87 /* ContentView.swift */,
+				3CF7565C278AE27A00982136 /* Logs */,
+				3CF7565A278AE1D900982136 /* DataList */,
+				3CF75659278AE1B000982136 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3CF7564F278AE00400982136 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CF75650278AE01C00982136 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CF75659278AE1B000982136 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3CF7565A278AE1D900982136 /* DataList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataList;
+			sourceTree = "<group>";
+		};
+		3CF7565C278AE27A00982136 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
