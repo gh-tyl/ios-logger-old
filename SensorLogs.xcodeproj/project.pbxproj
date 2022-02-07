@@ -20,6 +20,7 @@
 		3C235C7E27868CB0004D4F87 /* SensorLogsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C7D27868CB0004D4F87 /* SensorLogsTests.swift */; };
 		3C235C8827868CB0004D4F87 /* SensorLogsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C8727868CB0004D4F87 /* SensorLogsUITests.swift */; };
 		3C235C8A27868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C8927868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift */; };
+		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		3C235C8327868CB0004D4F87 /* SensorLogsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorLogsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C235C8727868CB0004D4F87 /* SensorLogsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsUITests.swift; sourceTree = "<group>"; };
 		3C235C8927868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C4A190827B0DD15007A4A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 			children = (
 				3C1C050027AEB69000626070 /* Barometer.swift */,
 				3C1C050727B08DAE00626070 /* ScreenBrightness.swift */,
+				3C4A190927B1055D007A4A37 /* DataMining.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -123,6 +127,7 @@
 		3C235C6627868CAE004D4F87 /* SensorLogs */ = {
 			isa = PBXGroup;
 			children = (
+				3C4A190827B0DD15007A4A37 /* Info.plist */,
 				3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */,
 				3C1C04FF27AEB65100626070 /* Cores */,
 				3CF7564E278ADFFB00982136 /* Views */,
@@ -339,6 +344,7 @@
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
+				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +508,8 @@
 				DEVELOPMENT_TEAM = J39U7B46S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SensorLogs/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -531,6 +539,8 @@
 				DEVELOPMENT_TEAM = J39U7B46S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SensorLogs/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

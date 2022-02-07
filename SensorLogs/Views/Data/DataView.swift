@@ -1,18 +1,9 @@
-//
-//  DataView.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/02/06.
-//
-
 import SwiftUI
 
 struct DataView: View {
     @ObservedObject var manager = ScreenBrightnessManager()
 
     var currentBrightness = UIScreen.main.brightness
-    
-    
     
     var body: some View {
         VStack(spacing: 30) {
@@ -25,6 +16,7 @@ struct DataView: View {
                 Text("リセット")
             }
         }
+    }
 }
 
 struct DataView_Previews: PreviewProvider {

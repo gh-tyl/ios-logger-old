@@ -1,10 +1,3 @@
-//
-//  Barometer.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/02/05.
-//
-
 import Foundation
 import SwiftUI
 import Combine
@@ -17,7 +10,8 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
     var altimeter:CMAltimeter?
 
     @Published var pressureString:String = ""
-    @Published var altitudeString:String = ""
+    @Published var relaltitudeString:String = ""
+    @Published var absaltitudeString:String = ""
 
     override init() {
         super.init()
@@ -27,6 +21,7 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
 
     func doReset(){
         altimeter?.stopRelativeAltitudeUpdates()
+        altimeter?.stopAbsoluteAltitudeUpdates()
         startUpdate()
     }
 
@@ -36,13 +31,20 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
                 {data, error in
                     if error == nil {
                         let pressure:Double = data!.pressure.doubleValue
-                        let altitude:Double = data!.relativeAltitude.doubleValue
                         self.pressureString = String(format: "気圧:%.1f hPa", pressure * 10)
-                        self.altitudeString = String(format: "高さ:%.2f m",altitude)
+                        self.willChange.send()
+                    }
+            })
+        }
+        if(CMAltimeter.isAbsoluteAltitudeAvailable()) {
+            altimeter!.startAbsoluteAltitudeUpdates(to: OperationQueue.main, withHandler:
+                {data, error in
+                    if error == nil {
+                        let absaltitude:Double = data!.altitude
+                        self.absaltitudeString = String(format: "高さ:%.2f m", absaltitude)
                         self.willChange.send()
                     }
             })
         }
     }
-
 }

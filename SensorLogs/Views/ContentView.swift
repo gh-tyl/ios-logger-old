@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/01/06.
-//
-
 import SwiftUI
 import CoreData
 
@@ -14,11 +7,11 @@ struct ContentView: View {
         TabView {
             LogsView().tabItem{
                 Text("Logs")
-                Image(systemName: "command")
+                Image(systemName: "doc")
             }
             DataView().tabItem{
                 Text("Data")
-                Image(systemName: "shift")
+                Image(systemName: "waveform")
             }
         }
     }

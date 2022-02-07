@@ -1,32 +1,33 @@
-//
-//  LogsView.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/02/06.
-//
-
 import SwiftUI
 import Combine
 import CoreData
 import CoreMotion
 
 struct LogsView: View {
-    @ObservedObject var manager = AtmosphericPressureManager()
+    @ObservedObject var apmanager = AtmosphericPressureManager()
+    @ObservedObject var sbmanager = ScreenBrightnessManager()
 
-    let availabe = CMAltimeter.isRelativeAltitudeAvailable()
+    let relavailabe = CMAltimeter.isRelativeAltitudeAvailable()
+    let absavailabe = CMAltimeter.isAbsoluteAltitudeAvailable()
 
     var body: some View {
         VStack(spacing: 30) {
             VStack(spacing: 30) {
-                Text(availabe ? manager.pressureString : "----")
-                Text(availabe ? manager.altitudeString : "----")
+                Text(relavailabe ? apmanager.pressureString : "----")
+                Text(absavailabe ? apmanager.absaltitudeString : "----")
+                Text(sbmanager.brightnessString != "" ? sbmanager.brightnessString : "----")
             }
             Button(action: {
-                self.manager.doReset()
+                allReset()
             }) {
-                Text("リセット")
+                Text("Reset")
             }
         }
+    }
+    
+    func allReset(){
+        self.apmanager.doReset()
+        self.sbmanager.doReset()
     }
 }
 
