@@ -1,19 +1,21 @@
 import SwiftUI
 
 struct DataView: View {
-    @ObservedObject var manager = ScreenBrightnessManager()
-
-    var currentBrightness = UIScreen.main.brightness
+    @State private var sheetIsPresented = false
+    let R = [UIImage(named: "tyl_kindle")!]
+    
     
     var body: some View {
-        VStack(spacing: 30) {
-            VStack(spacing: 30) {
-                Text(manager.brightnessString)
-            }
+        VStack {
             Button(action: {
-                self.manager.doReset()
+                self.sheetIsPresented = true
+            }, label: { Text("show activity controller") })
+        }
+        .sheet(isPresented: $sheetIsPresented) {
+            UIActivityView(images: R, onCanceled: {
+                // on cancel
             }) {
-                Text("リセット")
+                // on success
             }
         }
     }

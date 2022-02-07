@@ -22,6 +22,11 @@ struct LogsView: View {
             }) {
                 Text("Reset")
             }
+            Button(action: {
+                CreateCsv(filename: "sample", fileArrData: [["a", "b", "c"], ["d", "e", "f"]])
+            }) {
+                Text("Save")
+            }
         }
     }
     
