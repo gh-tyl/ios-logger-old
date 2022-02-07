@@ -10,6 +10,7 @@
 		3C1C050127AEB69000626070 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050027AEB69000626070 /* Barometer.swift */; };
 		3C1C050327AF3CF400626070 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050227AF3CF400626070 /* LogsView.swift */; };
 		3C1C050627AF448300626070 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050527AF448300626070 /* DataView.swift */; };
+		3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050727B08DAE00626070 /* ScreenBrightness.swift */; };
 		3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */; };
 		3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C6927868CAE004D4F87 /* ContentView.swift */; };
 		3C235C6C27868CB0004D4F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C235C6B27868CB0004D4F87 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		3C1C050027AEB69000626070 /* Barometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
 		3C1C050227AF3CF400626070 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
 		3C1C050527AF448300626070 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		3C1C050727B08DAE00626070 /* ScreenBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightness.swift; sourceTree = "<group>"; };
 		3C235C6427868CAE004D4F87 /* SensorLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsApp.swift; sourceTree = "<group>"; };
 		3C235C6927868CAE004D4F87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3C1C050027AEB69000626070 /* Barometer.swift */,
+				3C1C050727B08DAE00626070 /* ScreenBrightness.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			files = (
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
 				3C1C050327AF3CF400626070 /* LogsView.swift in Sources */,
+				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
 				3C1C050127AEB69000626070 /* Barometer.swift in Sources */,
 				3C1C050627AF448300626070 /* DataView.swift in Sources */,
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,

@@ -11,7 +11,7 @@ import CoreData
 import CoreMotion
 
 struct LogsView: View {
-    @ObservedObject var manager = AltimatorManager()
+    @ObservedObject var manager = AtmosphericPressureManager()
 
     let availabe = CMAltimeter.isRelativeAltitudeAvailable()
 

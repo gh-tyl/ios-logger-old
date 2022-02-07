@@ -11,7 +11,7 @@ import Combine
 import CoreData
 import CoreMotion
 
-class AltimatorManager: NSObject, ObservableObject {
+class AtmosphericPressureManager: NSObject, ObservableObject {
     let willChange = PassthroughSubject<Void, Never>()
 
     var altimeter:CMAltimeter?

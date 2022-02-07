@@ -8,27 +8,23 @@
 import SwiftUI
 
 struct DataView: View {
-    var currentBrightness: CGFloat = 0.0
-    
-    func getCurrentBrightness() {
-      currentBrightness = UIScreen.main.brightness
-    }
+    @ObservedObject var manager = ScreenBrightnessManager()
 
+    var currentBrightness = UIScreen.main.brightness
+    
+    
+    
     var body: some View {
         VStack(spacing: 30) {
             VStack(spacing: 30) {
-                Text(availabe ? manager.pressureString : "----")
-                Text(availabe ? manager.altitudeString : "----")
+                Text(manager.brightnessString)
+            }
+            Button(action: {
+                self.manager.doReset()
+            }) {
+                Text("リセット")
             }
         }
-//        Button(action: {
-//            self.manager.doReset()
-//        }) {
-//            Text("リセット")
-//        }
-//        Text("\(currentBrightness)")
-//        Button("Get Current Brightness", action: getCurrentBrightness)
-    }
 }
 
 struct DataView_Previews: PreviewProvider {
