@@ -2,11 +2,12 @@ import SwiftUI
 import Combine
 import CoreData
 import CoreMotion
+import GoogleAPIClientForREST
 
 struct LogsView: View {
     @ObservedObject var apmanager = AtmosphericPressureManager()
     @ObservedObject var sbmanager = ScreenBrightnessManager()
-
+    
     let relavailabe = CMAltimeter.isRelativeAltitudeAvailable()
     let absavailabe = CMAltimeter.isAbsoluteAltitudeAvailable()
 

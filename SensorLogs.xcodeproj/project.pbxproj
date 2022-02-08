@@ -23,6 +23,8 @@
 		3C235C8A27868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C8927868CB0004D4F87 /* SensorLogsUITestsLaunchTests.swift */; };
 		3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27E30E27B118FD00609FC7 /* UIActivityView.swift */; };
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
+		3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */; };
+		3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */; };
 		54A85E0FDC5F52A4B66A6439 /* Pods_SensorLogs_SensorLogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC27D3A6DB07C1AFE3B7368 /* Pods_SensorLogs_SensorLogsUITests.framework */; };
 		E4E00DB83AF6EEEDEB769808 /* Pods_SensorLogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3CF15D1EBDFED0E5F49113 /* Pods_SensorLogsTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		3C27E30E27B118FD00609FC7 /* UIActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityView.swift; sourceTree = "<group>"; };
 		3C4A190827B0DD15007A4A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
+		3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateTime.swift; sourceTree = "<group>"; };
+		3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		586E0F3B8A6B7BD80C9CB10B /* Pods_SensorLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SensorLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696F943432CC99E7AD74BB32 /* Pods-SensorLogs-SensorLogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; path = "Target Support Files/Pods-SensorLogs-SensorLogsUITests/Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B4D1513277F21AEB68C9081 /* Pods-SensorLogsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogsTests.debug.xcconfig"; path = "Target Support Files/Pods-SensorLogsTests/Pods-SensorLogsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3C27E30E27B118FD00609FC7 /* UIActivityView.swift */,
+				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 		3CF75659278AE1B000982136 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 			files = (
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
 				3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */,
+				3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */,
 				3C1C050327AF3CF400626070 /* LogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
 				3C1C050127AEB69000626070 /* Barometer.swift in Sources */,
@@ -505,6 +512,7 @@
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
 				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
+				3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
