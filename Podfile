@@ -7,6 +7,7 @@ target 'SensorLogs' do
 
   # Pods for SensorLogs
   pod 'GoogleAPIClientForREST/Drive'
+  pod 'GoogleSignIn'
 
   target 'SensorLogsTests' do
     inherit! :search_paths
