@@ -25,6 +25,8 @@
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
 		3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */; };
 		3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */; };
+		3CDB590627B383950047E930 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB590527B383950047E930 /* HealthKit.framework */; };
+		3CDB590827B384660047E930 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB590727B384660047E930 /* Google.swift */; };
 		54A85E0FDC5F52A4B66A6439 /* Pods_SensorLogs_SensorLogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC27D3A6DB07C1AFE3B7368 /* Pods_SensorLogs_SensorLogsUITests.framework */; };
 		E4E00DB83AF6EEEDEB769808 /* Pods_SensorLogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3CF15D1EBDFED0E5F49113 /* Pods_SensorLogsTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,9 @@
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
 		3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateTime.swift; sourceTree = "<group>"; };
 		3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		3CDB590427B383950047E930 /* SensorLogs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorLogs.entitlements; sourceTree = "<group>"; };
+		3CDB590527B383950047E930 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		3CDB590727B384660047E930 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
 		586E0F3B8A6B7BD80C9CB10B /* Pods_SensorLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SensorLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696F943432CC99E7AD74BB32 /* Pods-SensorLogs-SensorLogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; path = "Target Support Files/Pods-SensorLogs-SensorLogsUITests/Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B4D1513277F21AEB68C9081 /* Pods-SensorLogsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogsTests.debug.xcconfig"; path = "Target Support Files/Pods-SensorLogsTests/Pods-SensorLogsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FB77BD76870C007824BA36C /* Pods_SensorLogs.framework in Frameworks */,
+				3CDB590627B383950047E930 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,7 @@
 		3C235C6627868CAE004D4F87 /* SensorLogs */ = {
 			isa = PBXGroup;
 			children = (
+				3CDB590427B383950047E930 /* SensorLogs.entitlements */,
 				3C4A190827B0DD15007A4A37 /* Info.plist */,
 				3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */,
 				3C1C04FF27AEB65100626070 /* Cores */,
@@ -194,6 +201,7 @@
 			children = (
 				3C27E30E27B118FD00609FC7 /* UIActivityView.swift */,
 				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
+				3CDB590727B384660047E930 /* Google.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 		E66A34B96B4DDDFCEA7B4C38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CDB590527B383950047E930 /* HealthKit.framework */,
 				586E0F3B8A6B7BD80C9CB10B /* Pods_SensorLogs.framework */,
 				8FC27D3A6DB07C1AFE3B7368 /* Pods_SensorLogs_SensorLogsUITests.framework */,
 				8B3CF15D1EBDFED0E5F49113 /* Pods_SensorLogsTests.framework */,
@@ -510,6 +519,7 @@
 				3C1C050627AF448300626070 /* DataView.swift in Sources */,
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
+				3CDB590827B384660047E930 /* Google.swift in Sources */,
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
 				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
 				3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */,
@@ -671,6 +681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SensorLogs/SensorLogs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SensorLogs/Preview Content\"";
@@ -703,6 +714,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SensorLogs/SensorLogs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SensorLogs/Preview Content\"";
