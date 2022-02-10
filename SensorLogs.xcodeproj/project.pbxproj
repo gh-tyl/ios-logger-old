@@ -156,8 +156,6 @@
 		3C235C6627868CAE004D4F87 /* SensorLogs */ = {
 			isa = PBXGroup;
 			children = (
-				3CDB590427B383950047E930 /* SensorLogs.entitlements */,
-				3C4A190827B0DD15007A4A37 /* Info.plist */,
 				3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */,
 				3C1C04FF27AEB65100626070 /* Cores */,
 				3CF7564E278ADFFB00982136 /* Views */,
@@ -165,6 +163,8 @@
 				3CF75650278AE01C00982136 /* Resources */,
 				3C27E30D27B118C400609FC7 /* Utils */,
 				3C235C7027868CB0004D4F87 /* Persistence.swift */,
+				3C4A190827B0DD15007A4A37 /* Info.plist */,
+				3CDB590427B383950047E930 /* SensorLogs.entitlements */,
 				3C235C7227868CB0004D4F87 /* SensorLogs.xcdatamodeld */,
 				3C235C6D27868CB0004D4F87 /* Preview Content */,
 			);

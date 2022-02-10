@@ -1,26 +1,48 @@
 import Foundation
-import CoreData
+import CoreMotion
 
-func CreateCsv(filename: String, fileArrData: [[String]]) {
-    let filePath = NSHomeDirectory() + "/Documents/" + filename + ".csv"
-    print("filePath : \(filePath)")
-    var fileStrData:String = ""
+class LogsWriter {
 
-    for singleArray in fileArrData{
-        for singleString in singleArray{
-            fileStrData += "\"" + singleString + "\""
-            if singleString != singleArray[singleArray.count-1]{
-                fileStrData += ","
-            }
+    var file: FileHandle?
+
+    func open(_ filePath: URL) {
+        do {
+            FileManager.default.createFile(atPath: filePath.path, contents: nil, attributes: nil)
+            let file = try FileHandle(forWritingTo: filePath)
+            var header = ""
+            header += "datetime,"
+            header += "atmospheric_pressure,"
+            header += "abs_altitude,"
+            header += "screen_brightness,"
+            header += "\n"
+            file.write(header.data(using: .utf8)!)
+            self.file = file
+        } catch let error {
+            print(error)
         }
-        fileStrData += "\n"
     }
-    print("fileStrData : \(fileStrData)")
-    
-    do{
-        try fileStrData.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
-        print("Success to Wite the File")
-    }catch let error as NSError{
-        print("Failure to Write File\n\(error)")
+
+    func write(_ logs: Dictionary<String, String>) {
+        guard let file = self.file else { return }
+        var text = ""
+        text += "\(String(describing: logs["datetime"])),"
+        text += "\(String(describing: logs["atmospheric_pressure"])),"
+        text += "\(String(describing: logs["abs_altitude"])),"
+        text += "\(String(describing: logs["screen_brightness"])),"
+        text += "\n"
+        file.write(text.data(using: .utf8)!)
     }
+
+    func close() {
+        guard let file = self.file else { return }
+        file.closeFile()
+        self.file = nil
+    }
+}
+
+func ExecLogsWriter(path: URL, logs: Dictionary<String, String>) {
+    let logswriter = LogsWriter()
+    logswriter.open(path)
+    logswriter.write(logs)
+    logswriter.close()
 }

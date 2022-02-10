@@ -13,6 +13,11 @@ struct LogsView: View {
     
     let relavailabe = CMAltimeter.isRelativeAltitudeAvailable()
     let absavailabe = CMAltimeter.isAbsoluteAltitudeAvailable()
+    
+    var path:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+//    var logs:Dictionary<String, AnyObject> = [:]
+//    var logs:[String: AnyObject] = [:]
 
     var body: some View {
         VStack(spacing: 30) {
@@ -36,7 +41,21 @@ struct LogsView: View {
                 Text("Start Recording")
             }
             Button(action: {
-                CreateCsv(filename: "sample", fileArrData: [["a", "b", "c"], ["d", "e", "f"]])
+                let logs:[String: String] = [
+                    "datetime": "\(currentdatetime)",
+                    "atmospheric_pressure": "\(apmanager.pressureString)",
+                    "abs_altitude": "\(apmanager.absaltitudeString)",
+                    "screen_brightness": "\(sbmanager.brightnessString)"
+                ]
+
+//                self.logs = ["datetime": currentdatetime]
+//                logs.updateValue(currentdatetime, forKey: "datetime")
+//                logs.updateValue(apmanager.pressureString, forKey: "atmospheric_pressure")
+//                logs.updateValue(apmanager.absaltitudeString, forKey: "abs_altitude")
+//                logs.updateValue(sbmanager.brightnessString, forKey: "screen_brightness")
+                print(path)
+                ExecLogsWriter(path: path, logs: logs)
+                
             }) {
                 Text("Save")
             }
