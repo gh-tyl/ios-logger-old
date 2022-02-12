@@ -2,7 +2,6 @@ import SwiftUI
 import Combine
 import CoreData
 import CoreMotion
-import GoogleAPIClientForREST
 
 struct LogsView: View {
     @ObservedObject var apmanager = AtmosphericPressureManager()
@@ -19,15 +18,28 @@ struct LogsView: View {
     
     var path:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(GetCurrentDatetimeFilename())_SensorLogs.csv")
     
+    @State var dir = File.documentDirectory.filePaths
     let logswriter = LogsWriter()
 
     var body: some View {
         VStack(spacing: 30) {
             VStack(spacing: 30) {
-                Text(currentdatetime)
-                Text(relavailabe ? apmanager.pressureString : "気圧:----")
-                Text(absavailabe ? apmanager.absaltitudeString : "高度:----")
-                Text(sbmanager.brightnessString != "" ? sbmanager.brightnessString : "輝度:----")
+                HStack{
+                    Text("日時: ")
+                    Text(currentdatetime)
+                }
+                HStack {
+                    Text("気圧: ")
+                    Text(relavailabe ? apmanager.pressureString : "----")
+                }
+                HStack {
+                    Text("高度: ")
+                    Text(absavailabe ? apmanager.absaltitudeString : "----")
+                }
+                HStack {
+                    Text("輝度: ")
+                    Text(sbmanager.brightnessString != "" ? sbmanager.brightnessString : "----")
+                }
             }
             if recordflag {
                 Button(action: {
@@ -51,7 +63,6 @@ struct LogsView: View {
             } else {
                 Button(action: {
                     recordflag = true
-                    print("logswriter.close")
                     self.timer?.invalidate()
                     let logs:[String: String] = [
                         "datetime": "\(currentdatetime)",
@@ -61,6 +72,7 @@ struct LogsView: View {
                     ]
                     print("logswriter.write")
                     self.logswriter.write(logs)
+                    print("logswriter.close")
                     self.logswriter.close()
                 }) {
                     Text("Stop Recording")

@@ -31,7 +31,8 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
                 {data, error in
                     if error == nil {
                         let pressure:Double = data!.pressure.doubleValue
-                        self.pressureString = String(format: "気圧:%.1f hPa", pressure * 10)
+//                        self.pressureString = String(format: "気圧:%.1f hPa", pressure * 10)
+                        self.pressureString = String(pressure)
                         self.willChange.send()
                     }
             })
@@ -41,7 +42,8 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
                 {data, error in
                     if error == nil {
                         let absaltitude:Double = data!.altitude
-                        self.absaltitudeString = String(format: "高さ:%.2f m", absaltitude)
+//                        self.absaltitudeString = String(format: "高さ:%.2f m", absaltitude)
+                        self.absaltitudeString = String(absaltitude)
                         self.willChange.send()
                     }
             })

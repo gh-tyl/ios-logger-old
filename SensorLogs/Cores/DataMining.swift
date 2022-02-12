@@ -40,9 +40,9 @@ class LogsWriter {
     }
 }
 
-func ExecLogsWriter(path: URL, logs: Dictionary<String, String>) {
-    let logswriter = LogsWriter()
-    logswriter.open(path)
-    logswriter.write(logs)
-    logswriter.close()
-}
+//func ExecLogsWriter(path: URL, logs: Dictionary<String, String>) {
+//    let logswriter = LogsWriter()
+//    logswriter.open(path)
+//    logswriter.write(logs)
+//    logswriter.close()
+//}
