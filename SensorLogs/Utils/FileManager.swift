@@ -229,9 +229,9 @@ extension File {
         guard let fileNames = try? FileManager.default.contentsOfDirectory(atPath: path) else {
             return []
         }
-        return try fileNames.map { try transform($0) }
-    // ファイル名で並べたいときは下を使用する
-    // return fileNames.sorted().map { try transform($0) }
+//        return try fileNames.map { try transform($0) }
+//     ファイル名で並べたいときは下を使用する
+        return try fileNames.sorted().map { try transform($0) }
     }
 }
 

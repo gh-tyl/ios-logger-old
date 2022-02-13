@@ -1,36 +1,22 @@
 import SwiftUI
 
-//struct UIActivityView: View {
-//    var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//    }
-//}
-
 public struct UIActivityView: UIViewControllerRepresentable {
-    private let images: [UIImage]
-    private let onCanceled: () -> Void
-    private let onShared: () -> Void
+    @Binding var fileurls: Set<FileList>
     
-    public init(images: [UIImage], onCanceled: @escaping () -> Void, success onShared: @escaping () -> Void) {
-        self.images = images
-        self.onCanceled = onCanceled
-        self.onShared = onShared
-    }
-
     public func makeUIViewController(context: Context) -> UIActivityViewController {
-        let activityController = UIActivityViewController(activityItems: images, applicationActivities: nil)
-        activityController.completionWithItemsHandler = {
-            (activityType, completed, returnedItems, error) in
-            if !completed {
-                self.onCanceled()
-                return
-            }
-            self.onShared()
+        var activityItems: [Any] = []
+        for fileurl in fileurls {
+            activityItems.append(URL(fileURLWithPath: fileurl.filepaths))
         }
-        return activityController
+
+        let controller = UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: nil)
+
+        return controller
     }
 
-    public func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
+    public func updateUIViewController(_ vc: UIActivityViewController, context: Context) {
     }
 }
 

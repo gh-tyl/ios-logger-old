@@ -4,76 +4,61 @@ import CoreData
 import CoreMotion
 
 struct DataView: View {
-//    @State private var sheetIsPresented = false
-//    let R = [UIImage(named: "tyl_kindle")!]
+    @State private var sheetIsPresented = false
     
-    @State var filepaths = File.documentDirectory.filePaths
-    @State var filenames = File.documentDirectory.fileNames
+    @State var filepathlist = File.documentDirectory.filePaths
+    @State var filenamelist = File.documentDirectory.fileNames
+    @State var contents = ""
+    @State private var selectedValue: Set<FileList> = []
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(self.filenames, id: \.self) { item in
-                    NavigationLink {
-                        Text("\(item)")
-                    } label: {
-                        Text(item)
+        VStack(spacing: 30){
+            NavigationView {
+                List(selection: $selectedValue) {
+                    ForEach(GetLogs(filepaths: filepathlist,
+                                    filenames: filenamelist),
+                            id: \.self)
+                    { item in
+                        NavigationLink {
+//                            Text(File(path: item.filepaths).contents ?? "")
+                            Text(contents)
+                                .onAppear(perform: {
+                                    self.contents = File(path: item.filepaths).contents  ?? ""
+                                })
+                        } label: {
+                            Text("\(item.filenames)")
+                        }
+                    }
+                    .onDelete(perform: self.deleteRow)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        HStack(spacing: 30) {
+                            Button(action: {
+                                self.sheetIsPresented = true
+                            })
+                            {Image(systemName: "square.and.arrow.up")}
+                            EditButton()
+                        }
                     }
                 }
-                .onDelete(perform: self.deleteRow)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            }
+            .onAppear(perform: {
+                self.filepathlist = File.documentDirectory.filePaths
+                self.filenamelist = File.documentDirectory.fileNames
+            })
         }
-        .onAppear(perform: {
-            self.filepaths = File.documentDirectory.filePaths
-            self.filenames = File.documentDirectory.fileNames
-        })
+        .sheet(isPresented: $sheetIsPresented) {
+            UIActivityView(fileurls: $selectedValue)
+        }
     }
-//        VStack {
-//            Button(action: {
-//                self.sheetIsPresented = true
-//            })
-//            {
-//                Image(systemName: "square.and.arrow.up")
-//
-//            }
-//        }
-//        .sheet(isPresented: $sheetIsPresented) {
-//            UIActivityView(images: R, onCanceled: {
-//                // on cancel
-//            }) {
-//                // on success
-//            }
-//        }
-//    }
-
-//    private func addItem() {
-//        withAnimation {
-//            let newItem = Item(context: viewContext)
-//            newItem.timestamp = Date()
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
-//    }
-
     func deleteRow(offsets: IndexSet) {
         withAnimation {
-            self.filenames.remove(atOffsets: offsets)
-            let delfile = File(path: filepaths[offsets.first!])
+            self.filenamelist.remove(atOffsets: offsets)
+            let delfile = File(path: filepathlist[offsets.first!])
             try? delfile.delete()
-            self.filepaths = File.documentDirectory.filePaths
-            self.filenames = File.documentDirectory.fileNames
+            self.filepathlist = File.documentDirectory.filePaths
+            self.filenamelist = File.documentDirectory.fileNames
         }
     }
 }
@@ -87,6 +72,6 @@ private let itemFormatter: DateFormatter = {
 
 struct DataView_Previews: PreviewProvider {
     static var previews: some View {
-        DataView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        DataView()
     }
 }

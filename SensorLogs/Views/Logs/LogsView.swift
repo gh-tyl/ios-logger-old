@@ -11,12 +11,8 @@ struct LogsView: View {
     @State var timer :Timer?
     @State var currentdatetime = GetCurrentDatetime()
     
-    var currentdate = GetCurrentDate()
-    
     let relavailabe = CMAltimeter.isRelativeAltitudeAvailable()
     let absavailabe = CMAltimeter.isAbsoluteAltitudeAvailable()
-    
-    var path:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(GetCurrentDatetimeFilename())_SensorLogs.csv")
     
     @State var dir = File.documentDirectory.filePaths
     let logswriter = LogsWriter()
@@ -44,6 +40,7 @@ struct LogsView: View {
             if recordflag {
                 Button(action: {
                     recordflag = false
+                    let path:URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("\(GetCurrentDatetimeFilename())_SensorLogs.csv")
                     print("path is \(path)")
                     print("logswriter.open")
                     self.logswriter.open(path)

@@ -1,5 +1,6 @@
 import Foundation
 import CoreMotion
+import SwiftUI
 
 class LogsWriter {
 
@@ -40,9 +41,16 @@ class LogsWriter {
     }
 }
 
-//func ExecLogsWriter(path: URL, logs: Dictionary<String, String>) {
-//    let logswriter = LogsWriter()
-//    logswriter.open(path)
-//    logswriter.write(logs)
-//    logswriter.close()
-//}
+struct FileList: Hashable {
+    var filepaths: String
+    var filenames: String
+}
+
+func GetLogs(filepaths: [String], filenames: [String]) -> [FileList] {
+    var filelist = [FileList(filepaths: "", filenames: "")]
+    for (filepath, filename) in zip(filepaths, filenames) {
+        filelist.append(FileList(filepaths: "\(filepath)", filenames: "\(filename)"))
+    }
+    filelist.removeFirst()
+    return filelist
+}
