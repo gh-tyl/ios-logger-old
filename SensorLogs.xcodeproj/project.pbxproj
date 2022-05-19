@@ -24,6 +24,13 @@
 		3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27E30E27B118FD00609FC7 /* UIActivityView.swift */; };
 		3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34C10027B72ECB00B99017 /* FileManager.swift */; };
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
+		3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AC283671D8005168D6 /* ToggleView.swift */; };
+		3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AF28367429005168D6 /* SensorRowView.swift */; };
+		3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B228367E25005168D6 /* SensorListView.swift */; };
+		3C96D5B72836809A005168D6 /* SensorSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B62836809A005168D6 /* SensorSettingModel.swift */; };
+		3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B92836B858005168D6 /* BackgroundView.swift */; };
+		3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BB2836B9C6005168D6 /* TitleView.swift */; };
+		3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */; };
 		3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */; };
 		3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */; };
 		3CDB590627B383950047E930 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB590527B383950047E930 /* HealthKit.framework */; };
@@ -72,6 +79,13 @@
 		3C34C10027B72ECB00B99017 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		3C4A190827B0DD15007A4A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
+		3C96D5AC283671D8005168D6 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		3C96D5AF28367429005168D6 /* SensorRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRowView.swift; sourceTree = "<group>"; };
+		3C96D5B228367E25005168D6 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
+		3C96D5B62836809A005168D6 /* SensorSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSettingModel.swift; sourceTree = "<group>"; };
+		3C96D5B92836B858005168D6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		3C96D5BB2836B9C6005168D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemView.swift; sourceTree = "<group>"; };
 		3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateTime.swift; sourceTree = "<group>"; };
 		3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		3CDB590427B383950047E930 /* SensorLogs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorLogs.entitlements; sourceTree = "<group>"; };
@@ -209,10 +223,56 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		3CF7564E278ADFFB00982136 /* Views */ = {
+		3C96D5A728366CB9005168D6 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				3C96D5AC283671D8005168D6 /* ToggleView.swift */,
+				3C96D5BB2836B9C6005168D6 /* TitleView.swift */,
+				3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		3C96D5AE283673E5005168D6 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				3C96D5AF28367429005168D6 /* SensorRowView.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		3C96D5B128367DE8005168D6 /* Organisms */ = {
+			isa = PBXGroup;
+			children = (
+				3C96D5B228367E25005168D6 /* SensorListView.swift */,
+			);
+			path = Organisms;
+			sourceTree = "<group>";
+		};
+		3C96D5B82836B823005168D6 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				3C96D5B92836B858005168D6 /* BackgroundView.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		3C96D5BD2836BF0A005168D6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
 				3C235C6927868CAE004D4F87 /* ContentView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		3CF7564E278ADFFB00982136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C96D5BD2836BF0A005168D6 /* Pages */,
+				3C96D5B82836B823005168D6 /* Templates */,
+				3C96D5B128367DE8005168D6 /* Organisms */,
+				3C96D5AE283673E5005168D6 /* Molecules */,
+				3C96D5A728366CB9005168D6 /* Atoms */,
 				3CF7565C278AE27A00982136 /* Logs */,
 				3C1C050427AF444F00626070 /* Data */,
 				3CF75659278AE1B000982136 /* Settings */,
@@ -223,6 +283,7 @@
 		3CF7564F278AE00400982136 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C96D5B62836809A005168D6 /* SensorSettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -514,8 +575,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
+				3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */,
 				3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */,
 				3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */,
+				3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */,
 				3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */,
 				3C1C050327AF3CF400626070 /* LogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
@@ -524,9 +587,14 @@
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
 				3CDB590827B384660047E930 /* Google.swift in Sources */,
+				3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */,
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
 				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
+				3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */,
+				3C96D5B72836809A005168D6 /* SensorSettingModel.swift in Sources */,
+				3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */,
 				3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */,
+				3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

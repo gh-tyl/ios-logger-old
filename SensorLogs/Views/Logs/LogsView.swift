@@ -16,6 +16,7 @@ struct LogsView: View {
     
     @State var dir = File.documentDirectory.filePaths
     let logswriter = LogsWriter()
+    let interval: Double = 15.0
 
     var body: some View {
         VStack(spacing: 30) {
@@ -44,7 +45,7 @@ struct LogsView: View {
                     print("path is \(path)")
                     print("logswriter.open")
                     self.logswriter.open(path)
-                    self.timer = Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) {_ in
+                    self.timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) {_ in
                         let logs:[String: String] = [
                             "datetime": "\(currentdatetime)",
                             "atmospheric_pressure": "\(apmanager.pressureString)",
