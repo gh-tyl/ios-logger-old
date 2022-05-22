@@ -1,18 +1,11 @@
-//
-//  SensorItemView.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/05/19.
-//
-
 import SwiftUI
 
 struct SensorRowView: View {
-    @State var screen: CGSize!
+    @State var sensorItem: String = ""
     
     var body: some View {
         HStack {
-            SensorItemView()
+            SensorItemView(sensorItem: sensorItem)
             ToggleView()
         }.frame(maxWidth: .infinity)
     }
@@ -20,7 +13,7 @@ struct SensorRowView: View {
 
 struct SensorRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorItemView()
+        SensorRowView(sensorItem: "Hello World!")
             .previewLayout(.sizeThatFits)
     }
 }

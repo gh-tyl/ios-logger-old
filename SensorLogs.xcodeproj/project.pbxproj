@@ -31,6 +31,8 @@
 		3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B92836B858005168D6 /* BackgroundView.swift */; };
 		3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BB2836B9C6005168D6 /* TitleView.swift */; };
 		3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */; };
+		3C96D5C128375569005168D6 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5C028375569005168D6 /* RecordView.swift */; };
+		3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5C22837792A005168D6 /* SensorLogsView.swift */; };
 		3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */; };
 		3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */; };
 		3CDB590627B383950047E930 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB590527B383950047E930 /* HealthKit.framework */; };
@@ -86,6 +88,8 @@
 		3C96D5B92836B858005168D6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		3C96D5BB2836B9C6005168D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemView.swift; sourceTree = "<group>"; };
+		3C96D5C028375569005168D6 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		3C96D5C22837792A005168D6 /* SensorLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsView.swift; sourceTree = "<group>"; };
 		3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateTime.swift; sourceTree = "<group>"; };
 		3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		3CDB590427B383950047E930 /* SensorLogs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorLogs.entitlements; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				3C96D5AC283671D8005168D6 /* ToggleView.swift */,
 				3C96D5BB2836B9C6005168D6 /* TitleView.swift */,
 				3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */,
+				3C96D5C028375569005168D6 /* RecordView.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				3C235C6927868CAE004D4F87 /* ContentView.swift */,
+				3C96D5C22837792A005168D6 /* SensorLogsView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -577,10 +583,12 @@
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
 				3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */,
 				3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */,
+				3C96D5C128375569005168D6 /* RecordView.swift in Sources */,
 				3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */,
 				3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */,
 				3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */,
 				3C1C050327AF3CF400626070 /* LogsView.swift in Sources */,
+				3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
 				3C1C050127AEB69000626070 /* Barometer.swift in Sources */,
 				3C1C050627AF448300626070 /* DataView.swift in Sources */,

@@ -1,24 +1,25 @@
-//
-//  BackgroundView.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/05/20.
-//
-
 import SwiftUI
 
 struct BackgroundView: View {
+    @State var title: String = ""
+    @State var sensorItem: String = ""
+    
     var body: some View {
-        VStack{
-            TitleView()
-            SensorListView()
+        ZStack {
+            VStack{
+                ScrollView {
+                    TitleView(title: title)
+                    SensorListView(sensorItem: sensorItem)
+                }
+                .frame(maxHeight: .infinity, alignment: .top)
+            }
+            RecordView()
         }
-        .frame(maxHeight: .infinity, alignment: .top)
     }
 }
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView()
+        BackgroundView(title: "title", sensorItem: "Hello World!")
     }
 }
