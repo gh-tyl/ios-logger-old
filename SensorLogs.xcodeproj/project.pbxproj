@@ -24,6 +24,7 @@
 		3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27E30E27B118FD00609FC7 /* UIActivityView.swift */; };
 		3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34C10027B72ECB00B99017 /* FileManager.swift */; };
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
+		3C817FE32840A55400D34AB8 /* SensorItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C817FE22840A55400D34AB8 /* SensorItemModel.swift */; };
 		3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AC283671D8005168D6 /* ToggleView.swift */; };
 		3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AF28367429005168D6 /* SensorRowView.swift */; };
 		3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B228367E25005168D6 /* SensorListView.swift */; };
@@ -81,6 +82,7 @@
 		3C34C10027B72ECB00B99017 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		3C4A190827B0DD15007A4A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
+		3C817FE22840A55400D34AB8 /* SensorItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemModel.swift; sourceTree = "<group>"; };
 		3C96D5AC283671D8005168D6 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		3C96D5AF28367429005168D6 /* SensorRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRowView.swift; sourceTree = "<group>"; };
 		3C96D5B228367E25005168D6 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3C1C050027AEB69000626070 /* Barometer.swift */,
+				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
 				3C1C050727B08DAE00626070 /* ScreenBrightness.swift */,
 				3C4A190927B1055D007A4A37 /* DataMining.swift */,
 			);
@@ -220,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				3C34C10027B72ECB00B99017 /* FileManager.swift */,
-				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
 				3CDB590727B384660047E930 /* Google.swift */,
 				3C27E30E27B118FD00609FC7 /* UIActivityView.swift */,
 			);
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				3C96D5B62836809A005168D6 /* SensorSettingModel.swift */,
+				3C817FE22840A55400D34AB8 /* SensorItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */,
 				3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */,
 				3C1C050327AF3CF400626070 /* LogsView.swift in Sources */,
+				3C817FE32840A55400D34AB8 /* SensorItemModel.swift in Sources */,
 				3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
 				3C1C050127AEB69000626070 /* Barometer.swift in Sources */,

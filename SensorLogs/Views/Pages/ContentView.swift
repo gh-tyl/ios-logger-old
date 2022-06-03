@@ -5,11 +5,11 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @State var titleSensorLogs: String = ""
-    @State var sensorItem: String = ""
+    @State var SensorItemModels: [SensorItemModel] = SensorItemsList
     
     var body: some View{
         TabView {
-            SensorLogsView(title: titleSensorLogs, sensorItem: sensorItem).tabItem{
+            SensorLogsView(title: titleSensorLogs, SensorItemModels: SensorItemModels).tabItem{
                 Text("Logs")
                 Image(systemName: "doc")
             }
@@ -23,6 +23,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(titleSensorLogs: "SensorLogs", sensorItem: "Hello World").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(titleSensorLogs: "Sensor Logs", SensorItemModels: SensorItemsList).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

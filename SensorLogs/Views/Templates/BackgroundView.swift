@@ -2,14 +2,14 @@ import SwiftUI
 
 struct BackgroundView: View {
     @State var title: String = ""
-    @State var sensorItem: String = ""
+    @State var SensorItemModels: [SensorItemModel] = SensorItemsList
     
     var body: some View {
         ZStack {
             VStack{
                 ScrollView {
                     TitleView(title: title)
-                    SensorListView(sensorItem: sensorItem)
+                    SensorListView(sensorItemModels: SensorItemModels)
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
             }
@@ -20,6 +20,6 @@ struct BackgroundView: View {
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        BackgroundView(title: "title", sensorItem: "Hello World!")
+        BackgroundView(title: "Background", SensorItemModels: SensorItemsList)
     }
 }

@@ -11,17 +11,16 @@ class ScreenBrightnessManager: NSObject, ObservableObject {
 
     override init() {
         super.init()
-        startUpdate()
+        startScreenBrightness()
     }
 
     func doReset(){
-        startUpdate()
+        startScreenBrightness()
     }
 
-    func startUpdate() {
+    func startScreenBrightness() {
         if(UIScreen.main.brightness >= 0.0) {
             let brightness:Double = UIScreen.main.brightness
-//            self.brightnessString = String(format: "輝度:%.2f", brightness)
             self.brightnessString = String(brightness)
             self.willChange.send()
         }

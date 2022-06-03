@@ -1,19 +1,20 @@
 import SwiftUI
 
 struct SensorRowView: View {
-    @State var sensorItem: String = ""
+    @State var sensorItem: SensorItemModel
     
     var body: some View {
         HStack {
-            SensorItemView(sensorItem: sensorItem)
-            ToggleView()
+            SensorItemView(sensorItemName: sensorItem.itemNameEN)
+            ToggleView(sensorItem: sensorItem)
         }.frame(maxWidth: .infinity)
     }
 }
 
 struct SensorRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorRowView(sensorItem: "Hello World!")
+        let index: Int = 1
+        SensorRowView(sensorItem: SensorItemsList[index])
             .previewLayout(.sizeThatFits)
     }
 }

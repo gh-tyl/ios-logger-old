@@ -10,43 +10,50 @@ class AtmosphericPressureManager: NSObject, ObservableObject {
     var altimeter:CMAltimeter?
 
     @Published var pressureString:String = ""
-    @Published var relaltitudeString:String = ""
     @Published var absaltitudeString:String = ""
+    @Published var relaltitudeString:String = ""
 
     override init() {
         super.init()
         altimeter = CMAltimeter()
-        startUpdate()
+//        startRelativeAltitudeUpdates()
+//        startAbsoluteAltitudeUpdate()
     }
 
-    func doReset(){
-        altimeter?.stopRelativeAltitudeUpdates()
-        altimeter?.stopAbsoluteAltitudeUpdates()
-        startUpdate()
-    }
-
-    func startUpdate() {
+//    気圧
+    func startRelativeAltitudeUpdates() {
         if(CMAltimeter.isRelativeAltitudeAvailable()) {
             altimeter!.startRelativeAltitudeUpdates(to: OperationQueue.main, withHandler:
                 {data, error in
                     if error == nil {
                         let pressure:Double = data!.pressure.doubleValue
-//                        self.pressureString = String(format: "気圧:%.1f hPa", pressure * 10)
                         self.pressureString = String(pressure)
                         self.willChange.send()
                     }
             })
         }
+    }
+    
+    func resetRelativeAltitudeUpdate(){
+        altimeter?.stopRelativeAltitudeUpdates()
+        startRelativeAltitudeUpdates()
+    }
+    
+//    高度
+    func startAbsoluteAltitudeUpdate() {
         if(CMAltimeter.isAbsoluteAltitudeAvailable()) {
             altimeter!.startAbsoluteAltitudeUpdates(to: OperationQueue.main, withHandler:
                 {data, error in
                     if error == nil {
                         let absaltitude:Double = data!.altitude
-//                        self.absaltitudeString = String(format: "高さ:%.2f m", absaltitude)
                         self.absaltitudeString = String(absaltitude)
                         self.willChange.send()
                     }
             })
         }
+    }
+    func resetAbsoluteAltitudeUpdate(){
+        altimeter?.stopAbsoluteAltitudeUpdates()
+        startAbsoluteAltitudeUpdate()
     }
 }

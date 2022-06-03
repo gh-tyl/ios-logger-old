@@ -1,10 +1,3 @@
-//
-//  SensorSettingModel.swift
-//  SensorLogs
-//
-//  Created by Tyler Inari on 2022/05/19.
-//
-
 import Foundation
 import SwiftUI
 import CoreLocation

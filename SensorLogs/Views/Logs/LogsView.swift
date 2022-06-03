@@ -90,8 +90,8 @@ struct LogsView: View {
     }
     
     func allReset() {
-        self.apmanager.doReset()
-        self.sbmanager.doReset()
+//        self.apmanager.doReset()
+//        self.sbmanager.doReset()
     }
 }
 

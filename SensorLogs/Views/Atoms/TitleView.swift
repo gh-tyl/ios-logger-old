@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TitleView: View {
     @State var title: String = ""
+    
     var body: some View {
         let height: CGFloat = 2.0
         let bar_color: Color = .gray
