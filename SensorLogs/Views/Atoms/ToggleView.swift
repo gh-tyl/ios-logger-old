@@ -1,20 +1,33 @@
 import SwiftUI
 
 struct ToggleView: View {
+    @EnvironmentObject var sensorItemModelData: SensorItemModelData
     @State private var isSet: Bool = false
-    @State var sensorItem: SensorItemModel
+    @State var sensorItemModel: SensorItemModel
+    
+    var sensorItemIndex: Int {
+        sensorItemModelData.SensorItems.firstIndex(where: {$0.id == sensorItemModel.id})!
+    }
     
     var body: some View {
-        Toggle(isOn: $isSet) {
-        }
-        .labelsHidden()
-        .padding()
+        Toggle("", isOn: $isSet)
+            .onChange(of: isSet, perform: { record in
+                if record {
+                    sensorItemModelData.SensorItems[sensorItemIndex].isRecord = true
+                } else {
+                    sensorItemModelData.SensorItems[sensorItemIndex].isRecord = false
+                }
+                print(sensorItemModelData.SensorItems[sensorItemIndex].itemNameEN, ":", sensorItemModelData.SensorItems[sensorItemIndex].isRecord)
+            })
+            .labelsHidden()
+            .padding()
     }
 }
 
 struct ToggleView_Previews: PreviewProvider {
     static var previews: some View {
-        ToggleView(sensorItem: SensorItemsList[0])
+        let index: Int = 0
+        ToggleView(sensorItemModel: SensorItemModelData().SensorItems[index])
             .previewLayout(.sizeThatFits)
     }
 }

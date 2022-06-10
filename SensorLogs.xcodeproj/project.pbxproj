@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FB77BD76870C007824BA36C /* Pods_SensorLogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 586E0F3B8A6B7BD80C9CB10B /* Pods_SensorLogs.framework */; };
-		3C1C050127AEB69000626070 /* Barometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050027AEB69000626070 /* Barometer.swift */; };
+		3C06503F2850E28000968EDB /* ExecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06503E2850E28000968EDB /* ExecManager.swift */; };
+		3C1C050127AEB69000626070 /* Altimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050027AEB69000626070 /* Altimeter.swift */; };
 		3C1C050327AF3CF400626070 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050227AF3CF400626070 /* LogsView.swift */; };
 		3C1C050627AF448300626070 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050527AF448300626070 /* DataView.swift */; };
 		3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050727B08DAE00626070 /* ScreenBrightness.swift */; };
@@ -24,11 +25,12 @@
 		3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27E30E27B118FD00609FC7 /* UIActivityView.swift */; };
 		3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34C10027B72ECB00B99017 /* FileManager.swift */; };
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
+		3C687AB92851E4C400004C9A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C687AB82851E4C400004C9A /* RecordingView.swift */; };
+		3C6E49F6284A06B80047807B /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E49F5284A06B80047807B /* Record.swift */; };
 		3C817FE32840A55400D34AB8 /* SensorItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C817FE22840A55400D34AB8 /* SensorItemModel.swift */; };
 		3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AC283671D8005168D6 /* ToggleView.swift */; };
 		3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AF28367429005168D6 /* SensorRowView.swift */; };
 		3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B228367E25005168D6 /* SensorListView.swift */; };
-		3C96D5B72836809A005168D6 /* SensorSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B62836809A005168D6 /* SensorSettingModel.swift */; };
 		3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B92836B858005168D6 /* BackgroundView.swift */; };
 		3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BB2836B9C6005168D6 /* TitleView.swift */; };
 		3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */; };
@@ -62,7 +64,8 @@
 /* Begin PBXFileReference section */
 		180F7EF2C8D5F68EAAFABD76 /* Pods-SensorLogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogs.debug.xcconfig"; path = "Target Support Files/Pods-SensorLogs/Pods-SensorLogs.debug.xcconfig"; sourceTree = "<group>"; };
 		308428BF1A10D39C83D587D3 /* Pods-SensorLogsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogsTests.release.xcconfig"; path = "Target Support Files/Pods-SensorLogsTests/Pods-SensorLogsTests.release.xcconfig"; sourceTree = "<group>"; };
-		3C1C050027AEB69000626070 /* Barometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometer.swift; sourceTree = "<group>"; };
+		3C06503E2850E28000968EDB /* ExecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecManager.swift; sourceTree = "<group>"; };
+		3C1C050027AEB69000626070 /* Altimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Altimeter.swift; sourceTree = "<group>"; };
 		3C1C050227AF3CF400626070 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
 		3C1C050527AF448300626070 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		3C1C050727B08DAE00626070 /* ScreenBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightness.swift; sourceTree = "<group>"; };
@@ -82,11 +85,12 @@
 		3C34C10027B72ECB00B99017 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		3C4A190827B0DD15007A4A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
+		3C687AB82851E4C400004C9A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		3C6E49F5284A06B80047807B /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		3C817FE22840A55400D34AB8 /* SensorItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemModel.swift; sourceTree = "<group>"; };
 		3C96D5AC283671D8005168D6 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		3C96D5AF28367429005168D6 /* SensorRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRowView.swift; sourceTree = "<group>"; };
 		3C96D5B228367E25005168D6 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
-		3C96D5B62836809A005168D6 /* SensorSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorSettingModel.swift; sourceTree = "<group>"; };
 		3C96D5B92836B858005168D6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		3C96D5BB2836B9C6005168D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemView.swift; sourceTree = "<group>"; };
@@ -138,10 +142,12 @@
 		3C1C04FF27AEB65100626070 /* Cores */ = {
 			isa = PBXGroup;
 			children = (
-				3C1C050027AEB69000626070 /* Barometer.swift */,
-				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
+				3C1C050027AEB69000626070 /* Altimeter.swift */,
 				3C1C050727B08DAE00626070 /* ScreenBrightness.swift */,
+				3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */,
+				3C6E49F5284A06B80047807B /* Record.swift */,
 				3C4A190927B1055D007A4A37 /* DataMining.swift */,
+				3C06503E2850E28000968EDB /* ExecManager.swift */,
 			);
 			path = Cores;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			children = (
 				3C235C6927868CAE004D4F87 /* ContentView.swift */,
 				3C96D5C22837792A005168D6 /* SensorLogsView.swift */,
+				3C687AB82851E4C400004C9A /* RecordingView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -291,7 +298,6 @@
 		3CF7564F278AE00400982136 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3C96D5B62836809A005168D6 /* SensorSettingModel.swift */,
 				3C817FE22840A55400D34AB8 /* SensorItemModel.swift */,
 			);
 			path = Model;
@@ -583,8 +589,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C06503F2850E28000968EDB /* ExecManager.swift in Sources */,
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
 				3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */,
+				3C6E49F6284A06B80047807B /* Record.swift in Sources */,
 				3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */,
 				3C96D5C128375569005168D6 /* RecordView.swift in Sources */,
 				3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */,
@@ -594,7 +602,7 @@
 				3C817FE32840A55400D34AB8 /* SensorItemModel.swift in Sources */,
 				3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
-				3C1C050127AEB69000626070 /* Barometer.swift in Sources */,
+				3C1C050127AEB69000626070 /* Altimeter.swift in Sources */,
 				3C1C050627AF448300626070 /* DataView.swift in Sources */,
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
@@ -603,9 +611,9 @@
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
 				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
 				3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */,
-				3C96D5B72836809A005168D6 /* SensorSettingModel.swift in Sources */,
 				3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */,
 				3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */,
+				3C687AB92851E4C400004C9A /* RecordingView.swift in Sources */,
 				3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

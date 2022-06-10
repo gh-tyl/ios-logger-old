@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct SensorItemView: View {
-    @State var sensorItemName: String = ""
+    @State var sensorItemNameEN: String = ""
     
     var body: some View {
-        Text(sensorItemName)
+        Text(sensorItemNameEN)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
     }
@@ -12,6 +12,6 @@ struct SensorItemView: View {
 
 struct SensorItemView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorItemView(sensorItemName: "Hello World!").previewLayout(.sizeThatFits)
+        SensorItemView(sensorItemNameEN: "Hello World!").previewLayout(.sizeThatFits)
     }
 }

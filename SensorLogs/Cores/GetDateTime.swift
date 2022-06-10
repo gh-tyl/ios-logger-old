@@ -31,7 +31,6 @@ extension String {
     func replace(_ from: String,_ to: String) -> String {
         var replacedString = self
         replacedString = replacedString.replacingOccurrences(of: from, with: to)
-
         return replacedString
     }
 }
