@@ -2,11 +2,10 @@ import SwiftUI
 
 struct TitleView: View {
     @State var title: String = ""
+    let height: CGFloat
+    let bar_color: Color
     
     var body: some View {
-        let height: CGFloat = 2.0
-        let bar_color: Color = .gray
-        
         VStack {
             Text(title)
                 .font(.title)
@@ -23,6 +22,8 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView(title: "title").previewLayout(.sizeThatFits)
+        TitleView(
+            title: "title", height: 2.0, bar_color: .gray
+        ).previewLayout(.sizeThatFits)
     }
 }

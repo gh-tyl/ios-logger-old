@@ -4,13 +4,19 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @State var titleSensorLogs: String = "Sensor Logs"
-    
     var body: some View{
         TabView {
-            SensorLogsView(title: titleSensorLogs).tabItem{
-                Text("Logs")
+            SensorLogsView().tabItem {
+                Text("Sensor Logs")
                 Image(systemName: "doc")
+            }
+            LabelsView().tabItem {
+                Text("Labels")
+                Image(systemName: "paperclip")
+            }
+            DataView().tabItem {
+                Text("Data")
+                Image(systemName: "list.dash.header.rectangle")
             }
         }
     }
@@ -18,7 +24,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(titleSensorLogs: "Sensor Logs")
+        ContentView()
             .environmentObject(SensorItemModelData())
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }

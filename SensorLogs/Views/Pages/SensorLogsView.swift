@@ -1,16 +1,17 @@
 import SwiftUI
 
 struct SensorLogsView: View {
-    @State var title: String = ""
     
     var body: some View {
-        BackgroundView(title: title)
+        NavigationView {
+            SensorTemplateView()
+        }
     }
 }
 
 struct SensorLogsView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorLogsView(title: "Sensor Logs")
+        SensorLogsView()
             .environmentObject(SensorItemModelData())
     }
 }

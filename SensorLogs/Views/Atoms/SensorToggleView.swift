@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ToggleView: View {
+struct SensorToggleViewView: View {
     @EnvironmentObject var sensorItemModelData: SensorItemModelData
     @State private var isSet: Bool = false
     @State var sensorItemModel: SensorItemModel
@@ -24,10 +24,10 @@ struct ToggleView: View {
     }
 }
 
-struct ToggleView_Previews: PreviewProvider {
+struct SensorToggleViewView_Previews: PreviewProvider {
     static var previews: some View {
         let index: Int = 0
-        ToggleView(sensorItemModel: SensorItemModelData().SensorItems[index])
+        SensorToggleViewView(sensorItemModel: SensorItemModelData().SensorItems[index])
             .previewLayout(.sizeThatFits)
     }
 }

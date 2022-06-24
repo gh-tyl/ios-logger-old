@@ -11,7 +11,7 @@
 		3C06503F2850E28000968EDB /* ExecManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06503E2850E28000968EDB /* ExecManager.swift */; };
 		3C1C050127AEB69000626070 /* Altimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050027AEB69000626070 /* Altimeter.swift */; };
 		3C1C050327AF3CF400626070 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050227AF3CF400626070 /* LogsView.swift */; };
-		3C1C050627AF448300626070 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050527AF448300626070 /* DataView.swift */; };
+		3C1C050627AF448300626070 /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050527AF448300626070 /* FileView.swift */; };
 		3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1C050727B08DAE00626070 /* ScreenBrightness.swift */; };
 		3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */; };
 		3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C235C6927868CAE004D4F87 /* ContentView.swift */; };
@@ -27,19 +27,26 @@
 		3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4A190927B1055D007A4A37 /* DataMining.swift */; };
 		3C687AB92851E4C400004C9A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C687AB82851E4C400004C9A /* RecordingView.swift */; };
 		3C6E49F6284A06B80047807B /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6E49F5284A06B80047807B /* Record.swift */; };
+		3C70A0BF285C386200EBC1E6 /* NavigationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70A0BE285C386200EBC1E6 /* NavigationButtonView.swift */; };
+		3C70A0C2285C6F2100EBC1E6 /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70A0C1285C6F2100EBC1E6 /* LabelsView.swift */; };
+		3C70A0C4285C6F2E00EBC1E6 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C70A0C3285C6F2E00EBC1E6 /* DataView.swift */; };
 		3C817FE32840A55400D34AB8 /* SensorItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C817FE22840A55400D34AB8 /* SensorItemModel.swift */; };
-		3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AC283671D8005168D6 /* ToggleView.swift */; };
+		3C96D5AD283671D8005168D6 /* SensorToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AC283671D8005168D6 /* SensorToggleView.swift */; };
 		3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5AF28367429005168D6 /* SensorRowView.swift */; };
 		3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B228367E25005168D6 /* SensorListView.swift */; };
-		3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B92836B858005168D6 /* BackgroundView.swift */; };
+		3C96D5BA2836B858005168D6 /* SensorTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5B92836B858005168D6 /* SensorTemplateView.swift */; };
 		3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BB2836B9C6005168D6 /* TitleView.swift */; };
 		3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */; };
-		3C96D5C128375569005168D6 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5C028375569005168D6 /* RecordView.swift */; };
 		3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C96D5C22837792A005168D6 /* SensorLogsView.swift */; };
 		3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */; };
 		3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */; };
+		3CB6C113285A0B2B003AAE7B /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6C112285A0B2B003AAE7B /* PickerView.swift */; };
 		3CDB590627B383950047E930 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CDB590527B383950047E930 /* HealthKit.framework */; };
 		3CDB590827B384660047E930 /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB590727B384660047E930 /* Google.swift */; };
+		3CF3FFAB285A2A8B001CBB0D /* PickerSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3FFAA285A2A8B001CBB0D /* PickerSetView.swift */; };
+		3CF3FFAD285A307D001CBB0D /* PickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3FFAC285A307D001CBB0D /* PickersView.swift */; };
+		3CF3FFAF285A3390001CBB0D /* ReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3FFAE285A3390001CBB0D /* ReadyView.swift */; };
+		3CF3FFB1285A37A6001CBB0D /* ReadyTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3FFB0285A37A6001CBB0D /* ReadyTemplateView.swift */; };
 		54A85E0FDC5F52A4B66A6439 /* Pods_SensorLogs_SensorLogsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC27D3A6DB07C1AFE3B7368 /* Pods_SensorLogs_SensorLogsUITests.framework */; };
 		E4E00DB83AF6EEEDEB769808 /* Pods_SensorLogsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3CF15D1EBDFED0E5F49113 /* Pods_SensorLogsTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +74,7 @@
 		3C06503E2850E28000968EDB /* ExecManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecManager.swift; sourceTree = "<group>"; };
 		3C1C050027AEB69000626070 /* Altimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Altimeter.swift; sourceTree = "<group>"; };
 		3C1C050227AF3CF400626070 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
-		3C1C050527AF448300626070 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		3C1C050527AF448300626070 /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		3C1C050727B08DAE00626070 /* ScreenBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightness.swift; sourceTree = "<group>"; };
 		3C235C6427868CAE004D4F87 /* SensorLogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorLogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C235C6727868CAE004D4F87 /* SensorLogsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsApp.swift; sourceTree = "<group>"; };
@@ -87,20 +94,27 @@
 		3C4A190927B1055D007A4A37 /* DataMining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMining.swift; sourceTree = "<group>"; };
 		3C687AB82851E4C400004C9A /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		3C6E49F5284A06B80047807B /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		3C70A0BE285C386200EBC1E6 /* NavigationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonView.swift; sourceTree = "<group>"; };
+		3C70A0C1285C6F2100EBC1E6 /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
+		3C70A0C3285C6F2E00EBC1E6 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		3C817FE22840A55400D34AB8 /* SensorItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemModel.swift; sourceTree = "<group>"; };
-		3C96D5AC283671D8005168D6 /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		3C96D5AC283671D8005168D6 /* SensorToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorToggleView.swift; sourceTree = "<group>"; };
 		3C96D5AF28367429005168D6 /* SensorRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRowView.swift; sourceTree = "<group>"; };
 		3C96D5B228367E25005168D6 /* SensorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorListView.swift; sourceTree = "<group>"; };
-		3C96D5B92836B858005168D6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		3C96D5B92836B858005168D6 /* SensorTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTemplateView.swift; sourceTree = "<group>"; };
 		3C96D5BB2836B9C6005168D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorItemView.swift; sourceTree = "<group>"; };
-		3C96D5C028375569005168D6 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		3C96D5C22837792A005168D6 /* SensorLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorLogsView.swift; sourceTree = "<group>"; };
 		3CB2E1AC27B1FF9600FCA0F9 /* GetDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateTime.swift; sourceTree = "<group>"; };
 		3CB2E1B027B203AC00FCA0F9 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		3CB6C112285A0B2B003AAE7B /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		3CDB590427B383950047E930 /* SensorLogs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorLogs.entitlements; sourceTree = "<group>"; };
 		3CDB590527B383950047E930 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		3CDB590727B384660047E930 /* Google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
+		3CF3FFAA285A2A8B001CBB0D /* PickerSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerSetView.swift; sourceTree = "<group>"; };
+		3CF3FFAC285A307D001CBB0D /* PickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersView.swift; sourceTree = "<group>"; };
+		3CF3FFAE285A3390001CBB0D /* ReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyView.swift; sourceTree = "<group>"; };
+		3CF3FFB0285A37A6001CBB0D /* ReadyTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyTemplateView.swift; sourceTree = "<group>"; };
 		586E0F3B8A6B7BD80C9CB10B /* Pods_SensorLogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SensorLogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696F943432CC99E7AD74BB32 /* Pods-SensorLogs-SensorLogsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; path = "Target Support Files/Pods-SensorLogs-SensorLogsUITests/Pods-SensorLogs-SensorLogsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B4D1513277F21AEB68C9081 /* Pods-SensorLogsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorLogsTests.debug.xcconfig"; path = "Target Support Files/Pods-SensorLogsTests/Pods-SensorLogsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +169,7 @@
 		3C1C050427AF444F00626070 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3C1C050527AF448300626070 /* DataView.swift */,
+				3C1C050527AF448300626070 /* FileView.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -238,10 +252,11 @@
 		3C96D5A728366CB9005168D6 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
-				3C96D5AC283671D8005168D6 /* ToggleView.swift */,
 				3C96D5BB2836B9C6005168D6 /* TitleView.swift */,
 				3C96D5BE2836BFCF005168D6 /* SensorItemView.swift */,
-				3C96D5C028375569005168D6 /* RecordView.swift */,
+				3C96D5AC283671D8005168D6 /* SensorToggleView.swift */,
+				3C70A0BE285C386200EBC1E6 /* NavigationButtonView.swift */,
+				3CB6C112285A0B2B003AAE7B /* PickerView.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -250,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				3C96D5AF28367429005168D6 /* SensorRowView.swift */,
+				3CF3FFAA285A2A8B001CBB0D /* PickerSetView.swift */,
 			);
 			path = Molecules;
 			sourceTree = "<group>";
@@ -258,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				3C96D5B228367E25005168D6 /* SensorListView.swift */,
+				3CF3FFAC285A307D001CBB0D /* PickersView.swift */,
 			);
 			path = Organisms;
 			sourceTree = "<group>";
@@ -265,7 +282,8 @@
 		3C96D5B82836B823005168D6 /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				3C96D5B92836B858005168D6 /* BackgroundView.swift */,
+				3C96D5B92836B858005168D6 /* SensorTemplateView.swift */,
+				3CF3FFB0285A37A6001CBB0D /* ReadyTemplateView.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -275,7 +293,10 @@
 			children = (
 				3C235C6927868CAE004D4F87 /* ContentView.swift */,
 				3C96D5C22837792A005168D6 /* SensorLogsView.swift */,
+				3CF3FFAE285A3390001CBB0D /* ReadyView.swift */,
 				3C687AB82851E4C400004C9A /* RecordingView.swift */,
+				3C70A0C1285C6F2100EBC1E6 /* LabelsView.swift */,
+				3C70A0C3285C6F2E00EBC1E6 /* DataView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -591,10 +612,11 @@
 			files = (
 				3C06503F2850E28000968EDB /* ExecManager.swift in Sources */,
 				3C235C7127868CB0004D4F87 /* Persistence.swift in Sources */,
+				3CF3FFAF285A3390001CBB0D /* ReadyView.swift in Sources */,
 				3C96D5BF2836BFCF005168D6 /* SensorItemView.swift in Sources */,
 				3C6E49F6284A06B80047807B /* Record.swift in Sources */,
 				3C27E30F27B118FD00609FC7 /* UIActivityView.swift in Sources */,
-				3C96D5C128375569005168D6 /* RecordView.swift in Sources */,
+				3CF3FFAD285A307D001CBB0D /* PickersView.swift in Sources */,
 				3CB2E1B127B203AC00FCA0F9 /* NotesView.swift in Sources */,
 				3C96D5B028367429005168D6 /* SensorRowView.swift in Sources */,
 				3C34C10127B72ECB00B99017 /* FileManager.swift in Sources */,
@@ -603,17 +625,23 @@
 				3C96D5C32837792A005168D6 /* SensorLogsView.swift in Sources */,
 				3C1C050827B08DAE00626070 /* ScreenBrightness.swift in Sources */,
 				3C1C050127AEB69000626070 /* Altimeter.swift in Sources */,
-				3C1C050627AF448300626070 /* DataView.swift in Sources */,
+				3C1C050627AF448300626070 /* FileView.swift in Sources */,
+				3CF3FFAB285A2A8B001CBB0D /* PickerSetView.swift in Sources */,
 				3C235C6A27868CAE004D4F87 /* ContentView.swift in Sources */,
 				3C235C7427868CB0004D4F87 /* SensorLogs.xcdatamodeld in Sources */,
 				3CDB590827B384660047E930 /* Google.swift in Sources */,
 				3C96D5B328367E25005168D6 /* SensorListView.swift in Sources */,
 				3C235C6827868CAE004D4F87 /* SensorLogsApp.swift in Sources */,
+				3CB6C113285A0B2B003AAE7B /* PickerView.swift in Sources */,
 				3C4A190A27B1055D007A4A37 /* DataMining.swift in Sources */,
-				3C96D5AD283671D8005168D6 /* ToggleView.swift in Sources */,
-				3C96D5BA2836B858005168D6 /* BackgroundView.swift in Sources */,
+				3C70A0BF285C386200EBC1E6 /* NavigationButtonView.swift in Sources */,
+				3C70A0C2285C6F2100EBC1E6 /* LabelsView.swift in Sources */,
+				3C96D5AD283671D8005168D6 /* SensorToggleView.swift in Sources */,
+				3C96D5BA2836B858005168D6 /* SensorTemplateView.swift in Sources */,
 				3CB2E1AD27B1FF9600FCA0F9 /* GetDateTime.swift in Sources */,
 				3C687AB92851E4C400004C9A /* RecordingView.swift in Sources */,
+				3C70A0C4285C6F2E00EBC1E6 /* DataView.swift in Sources */,
+				3CF3FFB1285A37A6001CBB0D /* ReadyTemplateView.swift in Sources */,
 				3C96D5BC2836B9C6005168D6 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

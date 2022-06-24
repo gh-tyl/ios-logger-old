@@ -3,7 +3,7 @@ import Combine
 import CoreData
 import CoreMotion
 
-struct DataView: View {
+struct FileView: View {
     @State private var sheetIsPresented = false
     
     @State var filepathlist = File.documentDirectory.filePaths
@@ -70,8 +70,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct DataView_Previews: PreviewProvider {
+struct FileView_Previews: PreviewProvider {
     static var previews: some View {
-        DataView()
+        FileView()
     }
 }

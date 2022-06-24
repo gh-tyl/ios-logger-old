@@ -6,7 +6,7 @@ struct SensorRowView: View {
     var body: some View {
         HStack {
             SensorItemView(sensorItemNameEN: sensorItemModel.itemNameEN)
-            ToggleView(sensorItemModel: sensorItemModel)
+            SensorToggleViewView(sensorItemModel: sensorItemModel)
         }.frame(maxWidth: .infinity)
     }
 }
