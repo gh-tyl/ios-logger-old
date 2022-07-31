@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct SensorTemplateView: View {
-    @State var title: String = "Sensor Logs"
+    var isActive: Bool = false
+    var title: String = "Sensor Logs"
     var height: CGFloat = 2.0
     var bar_color: Color = .gray
     
@@ -15,8 +16,11 @@ struct SensorTemplateView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             Spacer()
+//            NavigationButtonView(
+//                isActive: isActive, content: ReadyView()
+//            )
             NavigationButtonView(
-                content: ReadyView(), imgName: "play"
+                content: ReadyView()
             )
             Spacer()
         }
@@ -26,7 +30,7 @@ struct SensorTemplateView: View {
 
 struct SensorTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-        SensorTemplateView(title: "Sensor Logs")
+        SensorTemplateView()
             .environmentObject(SensorItemModelData())
     }
 }

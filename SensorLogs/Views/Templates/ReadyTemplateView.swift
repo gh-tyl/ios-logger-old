@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ReadyTemplateView: View {
-    @State var title: String = "Ready"
+    var isActive: Bool = true
+    var title: String = "Ready"
     var height: CGFloat = 2.0
     var bar_color: Color = .gray
     
@@ -15,7 +16,7 @@ struct ReadyTemplateView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             Spacer()
-            NavigationButtonView(content: RecordingView())
+            NavigationButtonView(isActive: isActive, content: RecordingView())
             Spacer()
         }
     }
@@ -23,6 +24,6 @@ struct ReadyTemplateView: View {
 
 struct ReadyTemplateView_Previews: PreviewProvider {
     static var previews: some View {
-        ReadyTemplateView(title: "Ready").previewLayout(.sizeThatFits)
+        ReadyTemplateView().previewLayout(.sizeThatFits)
     }
 }

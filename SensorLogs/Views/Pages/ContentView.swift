@@ -6,7 +6,9 @@ struct ContentView: View {
     
     var body: some View{
         TabView {
-            SensorLogsView().tabItem {
+            SensorLogsView()
+                .environmentObject(EnvironmentData())
+                .tabItem {
                 Text("Sensor Logs")
                 Image(systemName: "doc")
             }

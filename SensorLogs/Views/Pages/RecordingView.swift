@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct RecordingView: View {
+    var isNavigationBarBackButtonHidden: Bool = false
+    var isActive: Bool = false
     var body: some View {
         VStack {
-            NavigationButtonView(content: SensorLogsView())
+            NavigationButtonView(isActive: isActive, content: SensorLogsView())
         }
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(isNavigationBarBackButtonHidden)
     }
 }
 
